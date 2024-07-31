@@ -41,7 +41,7 @@ public class Product {
 	}
 
 	public void setQuantity(int updateQuantity) {
-		this.quantity = updateQuantity;
+		this.quantity += updateQuantity;
 	}
 
 }
