@@ -25,4 +25,12 @@ public class StoreInventory {
 			product.setQuantity(addQuantity);
 		}
 	}
+
+	public void viewInventory() {
+		for (Product product : inventory.values()) {
+			System.out.println("Product: " + product.getName());
+			System.out.println("# of items in stock: " + product.getQuantity());
+			System.out.println("Price of Product: " + product.getPrice() + "\n");
+		}
+	}
 }

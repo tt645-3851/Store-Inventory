@@ -46,4 +46,12 @@ public class StoreInventoryTest {
 		assertEquals(30, storeInventory.getInventory().get(3).getQuantity());
 	}
 
+	@Test
+	public void view_product_in_inventory() {
+		storeInventory.addProduct(product1);
+		storeInventory.addProduct(product2);
+		storeInventory.viewInventory();
+		assertEquals(2, storeInventory.getInventory().size());
+	}
+
 }
