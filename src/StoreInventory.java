@@ -27,11 +27,13 @@ public class StoreInventory {
 		}
 	}
 
+	// Views current inventory and prints total value of current inventory
 	public void viewInventory() {
 		System.out.println("Current Inventory\n------------------");
 		for (Product product : inventory.values()) {
 			System.out.println(product);
 		}
+		System.out.println("Total Value: " + calculateTotalValue());
 	}
 
 	public double calculateTotalValue() {
