@@ -33,7 +33,7 @@ public class StoreInventory {
 		for (Product product : inventory.values()) {
 			System.out.println(product);
 		}
-		System.out.println("Total Value: " + calculateTotalValue());
+		System.out.printf("Total Value: $%.2f", calculateTotalValue());
 	}
 
 	public double calculateTotalValue() {

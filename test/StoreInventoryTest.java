@@ -64,6 +64,7 @@ public class StoreInventoryTest {
 		assertEquals(70, storeInventory.getInventory().get(product3.getId()).getQuantity());
 	}
 
+	// Note: This test will print the result when running.
 	@Test
 	public void view_products_in_inventory() {
 		storeInventory.addProduct(product1);
