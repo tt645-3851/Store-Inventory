@@ -1,7 +1,7 @@
 public class Product {
-	private String name;
-	private int id;
-	private double price;
+	private final String name;
+	private final int id;
+	private final double price;
 	private int quantity;
 
 	public Product(String name, int id, double price, int quantity) {
@@ -16,24 +16,12 @@ public class Product {
 		return name;
 	}
 
-	public void setName(String newName) {
-		this.name = newName;
-	}
-
 	public int getId() {
 		return id;
 	}
 
-	public void setId(int newId) {
-		this.id = newId;
-	}
-
 	public double getPrice() {
 		return price;
-	}
-
-	public void setPrice(double newPrice) {
-		this.price = newPrice;
 	}
 
 	public int getQuantity() {
@@ -42,6 +30,11 @@ public class Product {
 
 	public void setQuantity(int updateQuantity) {
 		this.quantity += updateQuantity;
+	}
+
+	@Override
+	public String toString() {
+		return "Product: " + name + "\nID: " + id + "\nCurrent Quantity: " + quantity + "\nPrice: " + price + "\n";
 	}
 
 }

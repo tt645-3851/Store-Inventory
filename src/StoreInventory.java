@@ -2,6 +2,7 @@ import java.util.HashMap;
 
 public class StoreInventory {
 	private final HashMap<Integer, Product> inventory;
+	double totalValue;
 
 	public StoreInventory() {
 		inventory = new HashMap<>();
@@ -27,10 +28,16 @@ public class StoreInventory {
 	}
 
 	public void viewInventory() {
+		System.out.println("Current Inventory\n------------------");
 		for (Product product : inventory.values()) {
-			System.out.println("Product: " + product.getName());
-			System.out.println("# of items in stock: " + product.getQuantity());
-			System.out.println("Price of Product: " + product.getPrice() + "\n");
+			System.out.println(product);
 		}
+	}
+
+	public double calculateTotalValue() {
+		for (Product product : inventory.values()) {
+			totalValue += product.getPrice() * product.getQuantity();
+		}
+		return totalValue;
 	}
 }
